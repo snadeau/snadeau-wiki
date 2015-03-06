@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Scott's Wiki</title>
+        
+        <link type="text/css" rel="stylesheet" href="/static/stylesheets/wiki.css" />
+    </head>
+    
+    <body>
+		<div class="container">
+			<div id="title">Wiki</div>
+			<div>
+				{% if loggedin %}
+					<a href="/_edit{{pageid}}">Edit</a> | <a href="/logout">Logout</a>
+				{% else %}
+					<a href="/login">Login</a> | <a href="/signup">Signup</a>
+				{% endif %}
+			</div>
+			<div>
+				<h1>Welcome to Scott's Wiki!</h1>
+			</div>
+			<div>
+				<form method="post">
+					<textarea id="styled" name="inputText">{{content}}</textarea><br>
+					<input type="submit" name="submit" value="submit">
+				</form>
+			</div>
+		</div>
+    </body>
+    
+</html>

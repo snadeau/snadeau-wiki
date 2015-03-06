@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+        .error {
+            color:red;
+            text-transform:uppercase;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>User Registration</h2>
+    Please complete the following forms and press submit:
+    <br>
+    <br>
+    <form method="post">
+        <table>  
+            <tr>
+                <td>
+                    <label>Username</label>
+                </td>
+                <td>
+                    <input type="text" name="username" value="{{username}}">
+                </td>
+                <td class="error">
+                    {{usererror}}
+					{{duplicateerror}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password</label>
+                </td>
+                <td>
+                    <input type="password" name="password" value="">
+                </td>
+                <td class="error">
+                    {{passerror}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Verify Password</label>
+                </td>
+                <td>
+                    <input type="password" name="verify" value="">
+                </td>
+                <td class="error">
+                    {{verifyerror}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Email (Optional)</label>
+                </td>
+                <td>
+                    <input type="text" name="email" value="{{email}}">
+                </td>
+                <td class="error">
+                    {{emailerror}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
