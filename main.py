@@ -31,7 +31,7 @@ jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
                                autoescape = True)
 
 PAGE_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
-SECRET = 'vo2Hc4Ebs3rA9'
+SECRET = 'asdf'
 
 #
 #Models
